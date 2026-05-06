@@ -1,0 +1,346 @@
+/* ── BOTONES ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--cyan);
+  color: var(--bg);
+  border-color: var(--cyan);
+  font-weight: 700;
+}
+
+.btn--primary:hover {
+  background: transparent;
+  color: var(--cyan);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--cyan);
+  border-color: var(--glass-border);
+}
+
+.btn--outline:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+/* ── CURSOR DE ESCRITURA ── */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--lime);
+  vertical-align: middle;
+  animation: blink 0.8s infinite;
+}
+
+/* ── STAT CARDS (Sobre mí) ── */
+.stat-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.stat-card:hover {
+  border-color: var(--cyan);
+}
+
+.stat-card__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--cyan);
+}
+
+.stat-card__label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+}
+
+/* ── SKILL GROUP ── */
+.skill-group {
+  background: var(--bg2);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 1.8rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.skill-group:hover {
+  border-color: var(--cyan);
+  transform: translateY(-4px);
+}
+
+.skill-group__title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--cyan);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.skill-group__title::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--lime);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.skill-item {
+  margin-bottom: 1.2rem;
+}
+
+.skill-item__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.skill-item__name {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.skill-item__pct {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.skill-item__bar {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-item__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--lime));
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── PROJECT CARD ── */
+.project-card {
+  background: var(--bg2);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--cyan), var(--lime));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0, 229, 255, 0.3);
+}
+
+.project-card:hover::before {
+  transform: scaleX(1);
+}
+
+.project-card__num {
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(0, 229, 255, 0.07);
+  line-height: 1;
+  user-select: none;
+}
+
+.project-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--lime);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.project-card__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.project-card__desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 2px;
+  color: var(--cyan);
+  letter-spacing: 1px;
+}
+
+.project-card__links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s;
+}
+
+.project-link:hover {
+  color: var(--cyan);
+}
+
+.project-link svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* ── CONTACT ITEM ── */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text);
+  transition: color 0.3s;
+}
+
+.contact-item:hover {
+  color: var(--cyan);
+}
+
+.contact-item__icon {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: var(--cyan);
+  transition: border-color 0.3s;
+}
+
+.contact-item:hover .contact-item__icon {
+  border-color: var(--cyan);
+}
+
+/* ── FORMULARIO ── */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(0, 229, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 2px;
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.3s;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--cyan);
+}
+
+.form-group textarea {
+  min-height: 100px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+  opacity: 0.6;
+}

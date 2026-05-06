@@ -1,0 +1,101 @@
+/* ── GOOGLE FONTS ── */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500&display=swap');
+
+/* ── VARIABLES ── */
+:root {
+  --cyan:         #00e5ff;
+  --lime:         #aaff00;
+  --bg:           #050a0f;
+  --bg2:          #0b1420;
+  --bg3:          #0f1f30;
+  --glass:        rgba(0, 229, 255, 0.05);
+  --glass-border: rgba(0, 229, 255, 0.15);
+  --text:         #c8e6f5;
+  --muted:        #5a7a9a;
+
+  /* Fuentes */
+  --font-display: 'Orbitron', monospace;
+  --font-mono:    'Share Tech Mono', monospace;
+  --font-body:    'Inter', sans-serif;
+
+  /* Espaciado */
+  --section-pad: 6rem 3rem;
+  --container-max: 1100px;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── FONDO: GRILLA DE PUNTOS ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 229, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── TIPOGRAFÍA BASE ── */
+h1, h2, h3, h4 {
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.85;
+}
+
+/* ── UTILIDADES ── */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}

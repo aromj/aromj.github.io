@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Anthony — Software Developer especializado en JavaScript, Python y bases de datos.">
+
+  <title>Anthony | Software Developer</title>
+
+  <!-- ── ESTILOS ── -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <nav class="nav" aria-label="Navegación principal">
+    <a class="nav__logo" href="#hero" aria-label="Inicio">A<span>.</span></a>
+    <ul class="nav__links" role="list">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!--HERO-->
+  <section id="hero" aria-label="Presentación">
+    <div class="container hero__content">
+
+      <p class="hero__tag">Disponible para trabajar</p>
+
+      <h1 class="hero__name">
+        Hola, soy<br>
+        <span class="accent">Anthony Romero</span>
+      </h1>
+
+      <!-- El texto se anima desde main.js -->
+      <div class="hero__role" id="typed-text" aria-live="polite">
+        <span class="cursor"></span>
+      </div>
+
+      <!-- ✏️ Personaliza esta descripción -->
+      <p class="hero__desc">
+        Desarrollador de software recién egresado, especializado en <strong>desarrollo web
+        full-stack</strong>, bases de datos y automatización. Me enfoco en transformar
+        ideas en soluciones funcionales, limpias y escalables.
+        Busco oportunidades donde pueda crecer profesionalmente, asumir retos reales y 
+        demostrar, a través de resultados, el valor de la disciplina y la constancia.
+      </p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#projects">Ver proyectos</a>
+        <a class="btn btn--outline" href="#contact">Contáctame</a>
+        <a class="btn btn--outline" href="assets/CV_Anthony_uio_general.pdf" target="_blank" rel="noopener">
+          Descargar CV
+        </a>
+      </div>
+    </div>
+
+    <!-- Visual de decoracion -->
+    <div class="hero__deco" aria-hidden="true">
+      const dev = {<br>
+      &nbsp;&nbsp;name: "Anthony",<br>
+      &nbsp;&nbsp;stack: ["JS", "Python", "SQL", "Node.js"],<br>
+      &nbsp;&nbsp;passion: "clean code",<br>
+      &nbsp;&nbsp;status: "open_to_work" ✓<br>
+      }<br><br>
+      SELECT * FROM projects<br>
+      WHERE quality = 'high'<br>
+      AND coffee_level > 0;
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="about" aria-labelledby="about-title">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-header__num">01</span>
+        <h2 class="section-header__title" id="about-title">Sobre mí</h2>
+        <div class="section-header__line" aria-hidden="true"></div>
+      </div>
+
+      <div class="about__grid">
+
+        <!-- Historia personal -->
+        <div class="about__text reveal">
+          <p>
+          Soy desarrollador de software egresado del
+          <strong>Instituto Superior Universitario Japón</strong>,
+          enfocado en crear soluciones tecnológicas que resuelvan problemas reales.
+          </p>
+          <p>
+          Me especializo en desarrollo web full-stack, abarcando desde el diseño de bases de datos
+          hasta la construcción de interfaces de usuario interactivas, siempre con un enfoque en
+          código limpio, mantenible y eficiente.
+          </p>
+          <p>
+          Fuera del desarrollo, continúo aprendiendo y explorando nuevas tecnologías, porque considero
+          que la mejora constante es clave para crecer como profesional en este campo.
+          </p>
+        </div>
+
+        <!-- ✏️ Ajusta los números según tu realidad -->
+        <div class="about__stats reveal">
+          <div class="stat-card">
+            <span class="stat-card__num">4+</span>
+            <span class="stat-card__label">Proyectos full-stack desarrollados</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">3+</span>
+            <span class="stat-card__label">Años de formación en desarrollo</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">3+</span>
+            <span class="stat-card__label">Tecnologías principales</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__num">1</span>
+            <span class="stat-card__label">Objetivo: primer empleo en desarrollo</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="skills" aria-labelledby="skills-title">
+  <div class="container">
+
+    <div class="section-header reveal">
+      <span class="section-header__num">02</span>
+      <h2 class="section-header__title" id="skills-title">Stack técnico</h2>
+      <div class="section-header__line" aria-hidden="true"></div>
+    </div>
+
+    <div class="skills__grid">
+
+      <!-- Frontend -->
+      <div class="skill-group reveal">
+        <div class="skill-group__title">Frontend</div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">HTML / CSS (maquetación responsive, buenas prácticas)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="90"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">Tailwind CSS (diseño rápido y escalable)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">JavaScript (DOM, lógica, consumo de APIs)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="80"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skill-group reveal">
+        <div class="skill-group__title">Backend</div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">Node.js (APIs REST, manejo de rutas y lógica)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">Python (automatización, lógica y manejo de datos)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="78"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bases de datos -->
+      <div class="skill-group reveal">
+        <div class="skill-group__title">Bases de datos</div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">MySQL / PostgreSQL (modelado relacional)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">SQL (joins, subconsultas, optimización básica)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="85"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Herramientas -->
+      <div class="skill-group reveal">
+        <div class="skill-group__title">Herramientas</div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">Git / GitHub (control de versiones)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">Docker (contenedores básicos)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="60"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="skill-item__info">
+            <span class="skill-item__name">Postman (testing de APIs)</span>
+          </div>
+          <div class="skill-item__bar">
+            <div class="skill-item__fill" data-width="75"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- PROYECTOS -->
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-header__num">03</span>
+        <h2 class="section-header__title" id="projects-title">Proyectos</h2>
+        <div class="section-header__line" aria-hidden="true"></div>
+      </div>
+
+      <div class="projects__grid">
+
+        <!-- ── Proyecto 1: Simulador de Examen ── -->
+        <article class="project-card reveal" aria-label="Simulador de Examen">
+          <span class="project-card__num" aria-hidden="true">01</span>
+          <p class="project-card__tag">Herramienta educativa</p>
+          <h3 class="project-card__title">Simulador de Examen Complexivo</h3>
+          <p class="project-card__desc">
+            Simulador interactivo con 1000 preguntas. Incluye modo de práctica,
+            revisión de preguntas fallidas, cronómetro de 3 horas y mezcla aleatoria de opciones.
+            100% offline — un solo archivo HTML sin dependencias externas.
+          </p>
+          <div class="project-card__tech">
+            <span class="tech-pill">HTML</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <!-- ✏️ Agrega tus links reales -->
+            <a class="project-link" href="https://github.com/Mrbunny99/simulador_examen" target="_blank" rel="noopener" aria-label="Ver código en GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+            <a class="project-link" href="https://mrbunny99.github.io/Simulador/simulador.html" target="_blank" rel="noopener" aria-label="Ver demo en vivo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Demo en vivo
+            </a>
+          </div>
+        </article>
+
+        <!-- ── Proyecto 2: Portal bancario ── -->
+        <article class="project-card reveal" aria-label="Segundo proyecto">
+          <span class="project-card__num" aria-hidden="true">02</span>
+          <p class="project-card__tag">Proyecto</p>
+          <h3 class="project-card__title">Portal Bancario</h3>
+          <p class="project-card__desc">
+            Portal bancario con autenticación, gestión de cuentas y transacciones. Stack: FastAPI + SQLite + SQLAlchemy + 
+            Jinja2 (sin JS extra). Enfocado en lógica backend, seguridad y manejo de datos. Interfaz sencilla pero funcional.
+          </p>
+          <div class="project-card__tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">HTML</span>
+            <span class="tech-pill">CSS</span>
+            <span class="tech-pill">Procfile</span>
+          </div>
+          <div class="project-card__links">
+            <a class="project-link" href="https://github.com/Mrbunny99/portalBancario.git" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- ── Proyecto 3: Pong ── -->
+        <article class="project-card reveal" aria-label="Tercer proyecto">
+          <span class="project-card__num" aria-hidden="true">03</span>
+          <p class="project-card__tag">Videojuego</p>
+          <h3 class="project-card__title">Pong</h3>
+          <p class="project-card__desc">
+            Videojuego de pong desarrollado en Python usando la biblioteca Pygame. Incluye modos de juego para un jugador 
+            (contra la IA) y dos jugadores, con controles simples y gráficos retro. Enfocado en lógica de juego, detección 
+            de colisiones y manejo de eventos.
+          </p>
+          <div class="project-card__tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pygame</span>
+          </div>
+          <div class="project-card__links">
+            <a class="project-link" href="https://github.com/Mrbunny99/Pong_basico.git" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Proyecto 4: Sistema solar-->
+         <article class="project-card reveal" aria-label="Cuarto proyecto">
+          <span class="project-card__num" aria-hiden="true">04</span>
+          <p class="project-card__tag">Proyecto</p>
+          <h3 class="project-card__title">Sistema Solar</h3>
+          <p class="project-card__desc">
+            Sistema solar interactivo desarrollado en Python usando la biblioteca Pygame. Permite explorar los planetas, 
+            aprender datos curiosos y observar sus órbitas en tiempo real. Enfocado en visualización, manejo de gráficos y eventos.
+          </p>
+          <div class="project-card__tech">
+            <span class="tech-pill">Python</span>
+            <span class="tech-pill">Pygame</span>
+            <span class="tech-pill">POO</span>
+          </div>
+          <div class="project-card__links">
+            <a class="project-link" href="https://github.com/Mrbunny99/proyectoPlaneta.git" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+      </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-header__num">04</span>
+        <h2 class="section-header__title" id="contact-title">Contacto</h2>
+        <div class="section-header__line" aria-hidden="true"></div>
+      </div>
+
+      <div class="contact__grid">
+
+        <div class="reveal">
+          <h3 class="contact__title">¿Hablamos?</h3>
+          <p class="contact__desc">
+            Estoy abierto a oportunidades de trabajo, proyectos freelance o
+            simplemente intercambiar ideas sobre tecnología. No dudes en escribirme.
+          </p>
+
+          <div class="contact__items">
+            <!-- ✏️ Actualiza con tu información real -->
+            <a class="contact-item" href="mailto:anthonyjosue2000@gmail.com">
+              <div class="contact-item__icon" aria-hidden="true">✉</div>
+              anthonyjosue2000@gmail.com
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/anthony-romero-b07243256" target="_blank" rel="noopener">
+              <div class="contact-item__icon" aria-hidden="true">in</div>
+              www.linkedin.com/in/anthony-romero-b07243256
+            </a>
+            <a class="contact-item" href="https://github.com/Mrbunny99" target="_blank" rel="noopener">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0 1 12 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.579.688.481C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </div>
+              github.com/Mrbunny99
+            </a>
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">📍</div>
+              Cuenca, Ecuador
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ Para que el formulario envíe emails, regístrate en formspree.io (gratis) -->
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="¿En qué puedo ayudarte?" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--submit" style="width:100%; justify-content:center;">
+            Enviar mensaje
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="footer__copy">© 2026 <span>Anthony Romero</span> — Hecho con código y café ☕</p>
+    <p class="footer__copy" style="font-size: 0.7rem;">HTML · CSS · JavaScript</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
