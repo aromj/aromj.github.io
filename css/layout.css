@@ -182,7 +182,7 @@ section {
   user-select: none;
 }
 
-/* ── ABOUT GRID ── */
+/* about grid*/
 .about__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -206,21 +206,21 @@ section {
   gap: 1.2rem;
 }
 
-/* ── SKILLS GRID ── */
+/* skills grid */
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* ── PROJECTS GRID ── */
+/* project grid*/
 .projects__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
-/* ── CONTACT GRID ── */
+/* contact grid */
 .contact__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

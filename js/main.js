@@ -1,21 +1,13 @@
-// ── EFECTO DE ESCRITURA (Typing)
-const ROLES = [
-  'Software Developer',
-  'Full-Stack Web Developer',
-  'JavaScript Enthusiast',
-  'Python Developer',
-  'Database & API Developer',
-  'Backend Developer',
-];
-
-const typedEl  = document.getElementById('typed-text');
-let roleIndex  = 0;
-let charIndex  = 0;
+const typedEl = document.getElementById('typed-text');
+let roles = window.i18n ? window.i18n.t('roles') : ['Software Developer'];
+let roleIndex = 0;
+let charIndex = 0;
 let isDeleting = false;
+let typingTimer = null;
 
 function typeEffect() {
-  const currentRole = ROLES[roleIndex];
-  const cursor      = '<span class="cursor"></span>';
+  const currentRole = roles[roleIndex];
+  const cursor = '<span class="cursor"></span>';
 
   if (!isDeleting) {
     // Efecto de escritura
@@ -23,7 +15,7 @@ function typeEffect() {
 
     if (charIndex > currentRole.length) {
       isDeleting = true;
-      setTimeout(typeEffect, 1500);
+      typingTimer = setTimeout(typeEffect, 1500);
       return;
     }
   } else {
@@ -31,13 +23,23 @@ function typeEffect() {
     typedEl.innerHTML = currentRole.slice(0, charIndex--) + cursor;
 
     if (charIndex < 0) {
-      isDeleting  = false;
-      roleIndex   = (roleIndex + 1) % ROLES.length;
+      isDeleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
     }
   }
 
-  setTimeout(typeEffect, isDeleting ? 60 : 120);
+  typingTimer = setTimeout(typeEffect, isDeleting ? 60 : 120);
 }
+
+// Se reinicia el typing cuando se cambia el idioma
+document.addEventListener('langChanged', (e) => {
+  clearTimeout(typingTimer);
+  roles = e.detail.roles;
+  roleIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+  if (typedEl) typeEffect();
+});
 
 if (typedEl) typeEffect();
 
@@ -68,18 +70,19 @@ document.querySelectorAll('.reveal').forEach((el) => {
 
 
 // ── HIGHLIGHT DE NAV AL HACER SCROLL ───
-const sections  = document.querySelectorAll('section[id]');
-const navLinks  = document.querySelectorAll('.nav__links a');
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav__links a');
 
 function updateNavHighlight() {
   let currentId = '';
 
   sections.forEach((section) => {
-    const offsetTop = section.offsetTop - 120;
-    if (window.scrollY >= offsetTop) {
-      currentId = section.id;
-    }
+    if (window.scrollY >= section.offsetTop - 120) currentId = section.id;
   });
+  navLinks.forEach((link) => {
+    link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+  });
+}
 
   navLinks.forEach((link) => {
     link.classList.toggle(
@@ -87,7 +90,7 @@ function updateNavHighlight() {
       link.getAttribute('href') === `#${currentId}`
     );
   });
-}
+
 
 window.addEventListener('scroll', updateNavHighlight, { passive: true });
 updateNavHighlight(); 
@@ -112,10 +115,11 @@ if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const btn      = form.querySelector('.btn--submit');
+    const btn = form.querySelector('.btn--submit');
     const original = btn.textContent;
-    btn.textContent = 'Enviando...';
-    btn.disabled    = true;
+    const lang = window.i18n ? window.i18n.getCurrentLang() : 'es';
+    btn.textContent = lang === 'es' ? 'Enviando...' : 'Sending...';
+    btn.disabled = true;
 
     try {
       const res = await fetch('https://formspree.io/f/mnjwzvjd', {
@@ -125,14 +129,13 @@ if (form) {
       });
 
       if (res.ok) {
-        btn.textContent = '¡Mensaje enviado! ✓';
+        btn.textContent = lang === 'es' ? '¡Mensaje enviado! ✓' : 'Message sent! ✓';
         form.reset();
-      } else {
-        throw new Error('Error al enviar');
-      }
+      } else throw new Error();
+      
     } catch {
-      btn.textContent  = 'Error — intenta de nuevo';
-      btn.disabled     = false;
+      btn.textContent = lang === 'es' ? 'Error — intenta de nuevo' : 'Error - please retry';
+      btn.disabled = false;
     }
 
     // Restaurar botón después de 3 segundos

@@ -19,21 +19,22 @@
   <nav class="nav" aria-label="Navegación principal">
     <a class="nav__logo" href="#hero" aria-label="Inicio">A<span>.</span></a>
     <ul class="nav__links" role="list">
-      <li><a href="#about">Sobre mí</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#contact">Contacto</a></li>
+      <li><a href="#about"    data-i18n="nav.about">Sobre mí</a></li>
+      <li><a href="#skills"   data-i18n="nav.skills">Skills</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+      <li><a href="#contact"  data-i18n="nav.contact">Contacto</a></li>
     </ul>
+    <button id="lang-toggle" class="lang-toggle" onclick="window.i18n.toggleLanguage()" aria-label="Switch to English">EN</button>
   </nav>
 
   <!--HERO-->
   <section id="hero" aria-label="Presentación">
     <div class="container hero__content">
 
-      <p class="hero__tag">Disponible para trabajar</p>
+      <p class="hero__tag" data-i18n="hero.available">Disponible para trabajar</p>
 
       <h1 class="hero__name">
-        Hola, soy<br>
+        <span data-i18n="hero.greeting">Hola, soy</span><br>
         <span class="accent">Anthony Romero</span>
       </h1>
 
@@ -41,7 +42,7 @@
         <span class="cursor"></span>
       </div>
 
-      <p class="hero__desc">
+      <p class="hero__desc" data-i18n="hero.desc" data-i18n-html>
         Desarrollador de software recién egresado, especializado en <strong>desarrollo web
         full-stack</strong>, bases de datos y automatización. Me enfoco en transformar
         ideas en soluciones funcionales, limpias y escalables.
@@ -50,9 +51,9 @@
       </p>
 
       <div class="hero__cta">
-        <a class="btn btn--primary" href="#projects">Ver proyectos</a>
-        <a class="btn btn--outline" href="#contact">Contáctame</a>
-        <a class="btn btn--outline" href="assets/CV_Anthony_uio_general.pdf" target="_blank" rel="noopener">
+        <a class="btn btn--primary" href="#projects" data-i18n="hero.cta.projects">Ver proyectos</a>
+        <a class="btn btn--outline" href="#contact" data-i18n="hero.cta.contact">Contáctame</a>
+        <a class="btn btn--outline" href="assets/CV_Anthony_uio_general.pdf" target="_blank" rel="noopener" data-i18n="hero.cta.cv">
           Descargar CV
         </a>
       </div>
@@ -78,7 +79,7 @@
 
       <div class="section-header reveal">
         <span class="section-header__num">01</span>
-        <h2 class="section-header__title" id="about-title">Sobre mí</h2>
+        <h2 class="section-header__title" id="about-title" data-i18n="about.title">Sobre mí</h2>
         <div class="section-header__line" aria-hidden="true"></div>
       </div>
 
@@ -86,17 +87,17 @@
 
         <!-- Historia personal -->
         <div class="about__text reveal">
-          <p>
+          <p data-i18n="about.p1" data-i18n-html>
           Soy desarrollador de software egresado del
           <strong>Instituto Superior Universitario Japón</strong>,
           enfocado en crear soluciones tecnológicas que resuelvan problemas reales.
           </p>
-          <p>
+          <p data-i18n="about.p2" data-i18n-html>
           Me especializo en desarrollo web full-stack, abarcando desde el diseño de bases de datos
           hasta la construcción de interfaces de usuario interactivas, siempre con un enfoque en
           código limpio, mantenible y eficiente.
           </p>
-          <p>
+          <p data-i18n="about.p3">
           Fuera del desarrollo, continúo aprendiendo y explorando nuevas tecnologías, porque considero
           que la mejora constante es clave para crecer como profesional en este campo.
           </p>
@@ -104,20 +105,20 @@
 
         <div class="about__stats reveal">
           <div class="stat-card">
-            <span class="stat-card__num">4+</span>
-            <span class="stat-card__label">Proyectos full-stack desarrollados</span>
+            <span class="stat-card__num" data-i18n="about.stat1.num">4+</span>
+            <span class="stat-card__label" data-i18n="about.stat1.label">Proyectos full-stack desarrollados</span>
           </div>
           <div class="stat-card">
-            <span class="stat-card__num">3+</span>
-            <span class="stat-card__label">Años de formación en desarrollo</span>
+            <span class="stat-card__num" data-i18n="about.stat2.num">3+</span>
+            <span class="stat-card__label" data-i18n="about.stat2.label">Años de formación en desarrollo</span>
           </div>
           <div class="stat-card">
-            <span class="stat-card__num">3+</span>
-            <span class="stat-card__label">Tecnologías principales</span>
+            <span class="stat-card__num" data-i18n="about.stat3.num">3+</span>
+            <span class="stat-card__label" data-i18n="about.stat3.label">Tecnologías principales</span>
           </div>
           <div class="stat-card">
-            <span class="stat-card__num">1</span>
-            <span class="stat-card__label">Objetivo: primer empleo en desarrollo</span>
+            <span class="stat-card__num" data-i18n="about.stat4.num">1</span>
+            <span class="stat-card__label" data-i18n="about.stat4.label">Objetivo: primer empleo en desarrollo</span>
           </div>
         </div>
 
@@ -131,7 +132,7 @@
 
     <div class="section-header reveal">
       <span class="section-header__num">02</span>
-      <h2 class="section-header__title" id="skills-title">Stack técnico</h2>
+      <h2 class="section-header__title" id="skills-title" data-i18n="skills.title">Stack técnico</h2>
       <div class="section-header__line" aria-hidden="true"></div>
     </div>
 
@@ -139,11 +140,11 @@
 
       <!-- Frontend -->
       <div class="skill-group reveal">
-        <div class="skill-group__title">Frontend</div>
+        <div class="skill-group__title" data-i18n="skills.frontend">Frontend</div>
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">HTML / CSS (maquetación responsive, buenas prácticas)</span>
+            <span class="skill-item__name" data-i18n="skill.html">HTML / CSS (maquetación responsive, buenas prácticas)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="90"></div>
@@ -152,7 +153,7 @@
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">Tailwind CSS (diseño rápido y escalable)</span>
+            <span class="skill-item__name" data-i18n="skill.tailwind">Tailwind CSS (diseño rápido y escalable)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="85"></div>
@@ -161,7 +162,7 @@
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">JavaScript (DOM, lógica, consumo de APIs)</span>
+            <span class="skill-item__name" data-i18n="skill.js">JavaScript (DOM, lógica, consumo de APIs)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="80"></div>
@@ -171,11 +172,11 @@
 
       <!-- Backend -->
       <div class="skill-group reveal">
-        <div class="skill-group__title">Backend</div>
+        <div class="skill-group__title" data-i18n="skills.backend">Backend</div>
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">Node.js (APIs REST, manejo de rutas y lógica)</span>
+            <span class="skill-item__name" data-i18n="skill.node">Node.js (APIs REST, manejo de rutas y lógica)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="75"></div>
@@ -184,7 +185,7 @@
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">Python (automatización, lógica y manejo de datos)</span>
+            <span class="skill-item__name" data-i18n="skill.python">Python (automatización, lógica y manejo de datos)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="78"></div>
@@ -194,11 +195,11 @@
 
       <!-- Bases de datos -->
       <div class="skill-group reveal">
-        <div class="skill-group__title">Bases de datos</div>
+        <div class="skill-group__title" data-i18n="skills.databases">Bases de datos</div>
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">MySQL / PostgreSQL (modelado relacional)</span>
+            <span class="skill-item__name" data-i18n="skill.mysql">MySQL / PostgreSQL (modelado relacional)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="80"></div>
@@ -207,7 +208,7 @@
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">SQL (joins, subconsultas, optimización básica)</span>
+            <span class="skill-item__name" data-i18n="skill.sql">SQL (joins, subconsultas, optimización básica)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="85"></div>
@@ -217,11 +218,11 @@
 
       <!-- Herramientas -->
       <div class="skill-group reveal">
-        <div class="skill-group__title">Herramientas</div>
+        <div class="skill-group__title" data-i18n="skills.tools">Herramientas</div>
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">Git / GitHub (control de versiones)</span>
+            <span class="skill-item__name" data-i18n="skill.git">Git / GitHub (control de versiones)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="75"></div>
@@ -230,7 +231,7 @@
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">Docker (contenedores básicos)</span>
+            <span class="skill-item__name" data-i18n="skill.docker">Docker (contenedores básicos)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="60"></div>
@@ -239,7 +240,7 @@
 
         <div class="skill-item">
           <div class="skill-item__info">
-            <span class="skill-item__name">Postman (testing de APIs)</span>
+            <span class="skill-item__name" data-i18n="skill.postman">Postman (testing de APIs)</span>
           </div>
           <div class="skill-item__bar">
             <div class="skill-item__fill" data-width="75"></div>
@@ -258,7 +259,7 @@
 
       <div class="section-header reveal">
         <span class="section-header__num">03</span>
-        <h2 class="section-header__title" id="projects-title">Proyectos</h2>
+        <h2 class="section-header__title" id="projects-title" data-i18n="projects.title">Proyectos</h2>
         <div class="section-header__line" aria-hidden="true"></div>
       </div>
 
@@ -267,9 +268,9 @@
         <!-- ── Proyecto 1: Simulador de Examen ── -->
         <article class="project-card reveal" aria-label="Simulador de Examen">
           <span class="project-card__num" aria-hidden="true">01</span>
-          <p class="project-card__tag">Herramienta educativa</p>
-          <h3 class="project-card__title">Simulador de Examen Complexivo</h3>
-          <p class="project-card__desc">
+          <p class="project-card__tag" data-i18n="proj1.tag">Herramienta educativa</p>
+          <h3 class="project-card__title" data-i18n="proj1.title">Simulador de Examen Complexivo</h3>
+          <p class="project-card__desc" data-i18n="proj1.desc">
             Simulador interactivo con 1000 preguntas. Incluye modo de práctica,
             revisión de preguntas fallidas, cronómetro de 3 horas y mezcla aleatoria de opciones.
             100% offline — un solo archivo HTML sin dependencias externas.
@@ -294,9 +295,9 @@
         <!-- ── Proyecto 2: Portal bancario ── -->
         <article class="project-card reveal" aria-label="Segundo proyecto">
           <span class="project-card__num" aria-hidden="true">02</span>
-          <p class="project-card__tag">Proyecto</p>
-          <h3 class="project-card__title">Portal Bancario</h3>
-          <p class="project-card__desc">
+          <p class="project-card__tag" data-i18n="proj2.tag">Proyecto</p>
+          <h3 class="project-card__title" data-i18n="proj2.title">Portal Bancario</h3>
+          <p class="project-card__desc" data-i18n="proj2.desc">
             Portal bancario con autenticación, gestión de cuentas y transacciones. Stack: FastAPI + SQLite + SQLAlchemy + 
             Jinja2 (sin JS extra). Enfocado en lógica backend, seguridad y manejo de datos. Interfaz sencilla pero funcional.
           </p>
@@ -317,9 +318,9 @@
         <!-- ── Proyecto 3: Pong ── -->
         <article class="project-card reveal" aria-label="Tercer proyecto">
           <span class="project-card__num" aria-hidden="true">03</span>
-          <p class="project-card__tag">Videojuego</p>
-          <h3 class="project-card__title">Pong</h3>
-          <p class="project-card__desc">
+          <p class="project-card__tag" data-i18n="proj3.tag">Videojuego</p>
+          <h3 class="project-card__title" data-i18n="proj3.title">Pong</h3>
+          <p class="project-card__desc" data-i18n="proj3.desc">
             Videojuego de pong desarrollado en Python usando la biblioteca Pygame. Incluye modos de juego para un jugador 
             (contra la IA) y dos jugadores, con controles simples y gráficos retro. Enfocado en lógica de juego, detección 
             de colisiones y manejo de eventos.
@@ -339,9 +340,9 @@
         <!-- Proyecto 4: Sistema solar-->
          <article class="project-card reveal" aria-label="Cuarto proyecto">
           <span class="project-card__num" aria-hiden="true">04</span>
-          <p class="project-card__tag">Proyecto</p>
-          <h3 class="project-card__title">Sistema Solar</h3>
-          <p class="project-card__desc">
+          <p class="project-card__tag" data-i18n="proj4.tag">Proyecto</p>
+          <h3 class="project-card__title" data-i18n="proj4.title">Sistema Solar</h3>
+          <p class="project-card__desc" data-i18n="proj4.desc">
             Sistema solar interactivo desarrollado en Python usando la biblioteca Pygame. Permite explorar los planetas, 
             aprender datos curiosos y observar sus órbitas en tiempo real. Enfocado en visualización, manejo de gráficos y eventos.
           </p>
@@ -366,15 +367,15 @@
 
       <div class="section-header reveal">
         <span class="section-header__num">04</span>
-        <h2 class="section-header__title" id="contact-title">Contacto</h2>
+        <h2 class="section-header__title" id="contact-title" data-i18n="contact.title">Contacto</h2>
         <div class="section-header__line" aria-hidden="true"></div>
       </div>
 
       <div class="contact__grid">
 
         <div class="reveal">
-          <h3 class="contact__title">¿Hablamos?</h3>
-          <p class="contact__desc">
+          <h3 class="contact__title" data-i18n="contact.heading">¿Hablamos?</h3>
+          <p class="contact__desc" data-i18n="contact.desc">
             Estoy abierto a oportunidades de trabajo, proyectos freelance o
             simplemente intercambiar ideas sobre tecnología. No dudes en escribirme.
           </p>
@@ -403,18 +404,18 @@
 
         <form class="contact-form reveal" id="contact-form" novalidate>
           <div class="form-group">
-            <label for="name">Nombre</label>
+            <label for="name" data-i18n="contact.form.name">Nombre</label>
             <input type="text" id="name" name="name" placeholder="Tu nombre" required>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" data-i18n="contact.form.email">Email</label>
             <input type="email" id="email" name="email" placeholder="tu@email.com" required>
           </div>
           <div class="form-group">
-            <label for="message">Mensaje</label>
+            <label for="message" data-i18n="contact.form.email">Mensaje</label>
             <textarea id="message" name="message" placeholder="¿En qué puedo ayudarte?" required></textarea>
           </div>
-          <button type="submit" class="btn btn--primary btn--submit" style="width:100%; justify-content:center;">
+          <button type="submit" class="btn btn--primary btn--submit" style="width:100%; justify-content:center;" data-i18n="contact.form.send">
             Enviar mensaje
           </button>
         </form>
@@ -425,10 +426,11 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p class="footer__copy">© 2026 <span>Anthony Romero</span> — Hecho con código y café ☕</p>
+    <p class="footer__copy" data-i18n="footer.copy" data-i18n-html>© 2026 <span>Anthony Romero</span> — Hecho con código y café</p>
     <p class="footer__copy" style="font-size: 0.7rem;">HTML · CSS · JavaScript</p>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 
 </body>
