@@ -10,7 +10,7 @@ const TRANSLATIONS = {
     'hero.available': 'Disponible para trabajar',
     'hero.greeting':  'Hola, soy',
     'hero.desc':
-      'Desarrollador de software recién egresado, especializado en <strong>desarrollo web full-stack</strong>, bases de datos y automatización. Me enfoco en transformar ideas en soluciones funcionales, limpias y escalables. Busco oportunidades donde pueda crecer profesionalmente, asumir retos reales y demostrar, a través de resultados, el valor de la disciplina y la constancia.',
+      'Desarrollador de software, con experiencia en <strong>desarrollo web full-stack</strong>, bases de datos y automatización. Me enfoco en transformar ideas en soluciones funcionales, limpias y escalables. Busco oportunidades donde pueda crecer profesionalmente, asumir retos reales y demostrar, a través de resultados, el valor de la disciplina y la constancia.',
     'hero.cta.projects': 'Ver proyectos',
     'hero.cta.contact':  'Contáctame',
     'hero.cta.cv':       'Descargar CV',
@@ -20,7 +20,7 @@ const TRANSLATIONS = {
     'about.p1':
       'Soy desarrollador de software egresado del <strong>Instituto Superior Universitario Japón</strong>, enfocado en crear soluciones tecnológicas que resuelvan problemas reales.',
     'about.p2':
-      'Me especializo en desarrollo web full-stack, abarcando desde el diseño de bases de datos hasta la construcción de interfaces de usuario interactivas, siempre con un enfoque en código limpio, mantenible y eficiente.',
+      'Tengo experiencia en desarrollo web full-stack, abarcando desde el diseño de bases de datos hasta la construcción de interfaces de usuario interactivas, siempre con un enfoque en código limpio, mantenible y eficiente.',
     'about.p3':
       'Fuera del desarrollo, continúo aprendiendo y explorando nuevas tecnologías, porque considero que la mejora constante es clave para crecer como profesional en este campo.',
     'about.stat1.num':   '4+',
@@ -114,7 +114,7 @@ const TRANSLATIONS = {
     'hero.available': 'Available for work',
     'hero.greeting':  "Hi, I'm",
     'hero.desc':
-      'Recently graduated software developer specializing in <strong>full-stack web development</strong>, databases, and automation. I focus on turning ideas into functional, clean, and scalable solutions. I am looking for opportunities to grow professionally, take on real challenges, and prove through results the value of discipline and dedication.',
+      'Software developer with experience in <strong>full-stack web development</strong>, databases, and automation. I focus on turning ideas into functional, clean, and scalable solutions. I am looking for opportunities to grow professionally, take on real challenges, and prove through results the value of discipline and dedication.',
     'hero.cta.projects': 'View projects',
     'hero.cta.contact':  'Contact me',
     'hero.cta.cv':       'Download CV',
@@ -124,7 +124,7 @@ const TRANSLATIONS = {
     'about.p1':
       'I am a software developer graduated from <strong>Instituto Superior Universitario Japón</strong>, focused on building technology solutions that solve real problems.',
     'about.p2':
-      'I specialize in full-stack web development from database design to interactive user interfaces always with a focus on clean, maintainable, and efficient code.',
+      'I have experience in full-stack web development from database design to interactive user interfaces always with a focus on clean, maintainable, and efficient code.',
     'about.p3':
       'Outside of development, I continue to learn and explore new technologies, because I believe continuous improvement is key to growing as a professional in this field.',
     'about.stat1.num':   '4+',
